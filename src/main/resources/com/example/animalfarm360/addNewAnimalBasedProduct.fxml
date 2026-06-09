@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="601.0" prefWidth="705.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.adminRelated_AnimalManagementRelated.AddNewAnimalBasedProduct">
+
+            <Rectangle fill="#32726b" height="50.0" width="705.0" />
+            <Label layoutX="10.0" layoutY="8.0" text="🐏🐓 Animal Farm 360" textFill="WHITE">
+                <font>
+                    <Font name="System Bold Italic" size="24.0" />
+                </font>
+            </Label>
+            <Button layoutX="641.0" layoutY="13.0" onAction="#backAction" text="Back" />
+            <Label layoutX="20.0" layoutY="70.0" text="Product ID:" textFill="#362ed7" />
+            <TextField fx:id="productIdField" layoutX="200.0" layoutY="70.0" prefHeight="25.0" prefWidth="461.0" />
+            <Label layoutX="20.0" layoutY="110.0" text="Product Name:" textFill="#362ed7" />
+            <TextField fx:id="productNameField" layoutX="200.0" layoutY="110.0" prefHeight="25.0" prefWidth="461.0" />
+            <Label layoutX="20.0" layoutY="150.0" text="Product Type:" textFill="#362ed7" />
+            <ComboBox fx:id="productTypeComboBox" layoutX="200.0" layoutY="150.0" prefHeight="25.0" prefWidth="461.0" />
+            <Label layoutX="20.0" layoutY="190.0" text="Source Animal:" textFill="#362ed7" />
+            <ComboBox fx:id="sourceAnimalComboBox" layoutX="200.0" layoutY="190.0" prefHeight="25.0" prefWidth="461.0" />
+            <Label layoutX="20.0" layoutY="230.0" text="Breed:" textFill="#362ed7" />
+            <ComboBox fx:id="breedComboBox" layoutX="200.0" layoutY="230.0" prefHeight="25.0" prefWidth="461.0" />
+            <Label layoutX="20.0" layoutY="270.0" text="Production Date:" textFill="#362ed7" />
+            <DatePicker fx:id="productionDateField" layoutX="200.0" layoutY="270.0" prefHeight="25.0" prefWidth="461.0" />
+            <Label layoutX="20.0" layoutY="310.0" text="Quantity:" textFill="#362ed7" />
+            <TextField fx:id="quantityField" layoutX="200.0" layoutY="310.0" prefWidth="200.0" />
+            <ComboBox fx:id="unitComboBox" layoutX="410.0" layoutY="310.0" prefHeight="25.0" prefWidth="251.0" />
+            <Label layoutX="20.0" layoutY="350.0" text="Sale Price:" textFill="#362ed7" />
+            <TextField fx:id="salePriceField" layoutX="200.0" layoutY="350.0" prefHeight="25.0" prefWidth="461.0" />
+            <Label layoutX="20.0" layoutY="390.0" text="Notes:" textFill="#362ed7" />
+            <TextArea fx:id="notesField" layoutX="200.0" layoutY="390.0" prefHeight="50.0" prefWidth="461.0" />
+            <Label layoutX="20.0" layoutY="480.0" text="Upload Image:" textFill="#362ed7" />
+            <ImageView fx:id="productImageView" fitHeight="90.0" fitWidth="91.0" layoutX="200.0" layoutY="444.0" preserveRatio="true" />
+            <Button layoutX="320.0" layoutY="480.0" onAction="#uploadImage" text="Browse Image" />
+            <Button layoutX="283.0" layoutY="542.0" onAction="#saveProduct" prefHeight="25.0" prefWidth="148.0" text="Save Product" />
+            <Label layoutX="5.0" layoutY="578.0" prefHeight="17.0" prefWidth="695.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+                <font><Font size="10.0" /></font>
+            </Label>
+
+        </AnchorPane>

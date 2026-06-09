@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="702.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.adminRelated_AnimalManagementRelated.EditAnimalBasedProductInfo">
+        <Rectangle fill="#32726b" height="50.0" width="702.0" />
+            <Label layoutX="10.0" layoutY="8.0" text="🐏🐓 Animal Farm 360" textFill="WHITE">
+                <font><Font name="System Bold Italic" size="24.0" /></font>
+            </Label>
+            <Button layoutX="626.0" layoutY="13.0" onAction="#backAction" text="Back" />
+            <TextField fx:id="searchProductIdField" layoutX="297.0" layoutY="13.0" prefWidth="200.0" promptText="Enter Product ID" />
+            <Button layoutX="507.0" layoutY="13.0" onAction="#loadProduct" text="Load Product" />
+            <Label layoutX="20.0" layoutY="59.0" text="Product ID:" textFill="#291dae" />
+            <TextField fx:id="productIdField" editable="false" layoutX="200.0" layoutY="55.0" prefWidth="350.0" />
+            <Label layoutX="17.0" layoutY="100.0" text="Product Name:" textFill="#291dae" />
+            <TextField fx:id="productNameField" layoutX="200.0" layoutY="96.0" prefWidth="350.0" />
+            <Label layoutX="19.0" layoutY="142.0" text="Product Type:" textFill="#291dae" />
+            <ComboBox fx:id="productTypeComboBox" layoutX="200.0" layoutY="138.0" prefWidth="350.0" />
+            <Label layoutX="17.0" layoutY="182.0" text="Source Animal:" textFill="#291dae" />
+            <ComboBox fx:id="sourceAnimalComboBox" layoutX="200.0" layoutY="178.0" prefWidth="350.0" />
+            <Label layoutX="21.0" layoutY="222.0" text="Breed:" textFill="#291dae" />
+            <ComboBox fx:id="breedComboBox" layoutX="200.0" layoutY="218.0" prefWidth="350.0" />
+            <Label layoutX="18.0" layoutY="262.0" text="Production Date:" textFill="#291dae" />
+            <DatePicker fx:id="productionDateField" layoutX="200.0" layoutY="258.0" prefWidth="350.0" />
+            <Label layoutX="20.0" layoutY="302.0" prefHeight="17.0" prefWidth="54.0" text="Quantity:" textFill="#291dae" />
+            <TextField fx:id="quantityField" layoutX="200.0" layoutY="298.0" prefWidth="200.0" />
+            <ComboBox fx:id="unitComboBox" layoutX="407.0" layoutY="298.0" prefWidth="140.0" />
+            <Label layoutX="22.0" layoutY="342.0" text="Sale Price:" textFill="#291dae" />
+            <TextField fx:id="salePriceField" layoutX="200.0" layoutY="338.0" prefWidth="350.0" />
+            <Label layoutX="21.0" layoutY="391.0" text="Notes:" textFill="#291dae" />
+            <TextArea fx:id="notesField" layoutX="200.0" layoutY="377.0" prefHeight="35.0" prefWidth="350.0" />
+            <Label layoutX="18.0" layoutY="470.0" text="Upload Image:" textFill="#291dae" />
+            <ImageView fx:id="productImageView" fitHeight="70.0" fitWidth="79.0" layoutX="200.0" layoutY="458.0" preserveRatio="true" />
+            <Button layoutX="316.0" layoutY="493.0" onAction="#uploadImage" text="Browse Image" />
+            <Button layoutX="233.0" layoutY="548.0" onAction="#updateProduct" prefHeight="25.0" prefWidth="177.0" text="Update Product" />
+            <Label layoutX="6.0" layoutY="573.0" prefHeight="27.0" prefWidth="630.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+                <font><Font size="10.0" /></font>
+            </Label>
+    <Label layoutX="21.0" layoutY="429.0" text="Status:" textFill="#291dae" />
+
+    <RadioButton fx:id="activeRadio" layoutX="200.0" layoutY="429.0" text="Active" toggleGroup="$statusToggleGroup" />
+    <RadioButton fx:id="inactiveRadio" layoutX="290.0" layoutY="429.0" text="Inactive" toggleGroup="$statusToggleGroup" />
+
+
+</AnchorPane>

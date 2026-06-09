@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="689.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.employeeRelated.ViewAttendanceRecord">
+
+    <children>
+        <Rectangle fill="#32726b" height="50.0" layoutX="0.0" layoutY="0.0" width="712.0" />
+        <Label layoutX="4.0" layoutY="8.0" prefHeight="35.0" prefWidth="257.0" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="filterDatePicker" layoutX="365.0" layoutY="13.0" promptText="Select Date" />
+        <Button fx:id="filterButton" layoutX="548.0" layoutY="13.0" onAction="#filterByDate" text="Filter" />
+        <TableView fx:id="attendanceTable" layoutX="16.0" layoutY="60.0" prefHeight="400" prefWidth="680.0">
+            <columns>
+                <TableColumn fx:id="dateColumn" prefWidth="335.0" text="Date" />
+                <TableColumn fx:id="statusColumn" prefWidth="368.0" text="Status" />
+            </columns>
+        </TableView>
+        <Label fx:id="messageLabel" layoutX="16.0" layoutY="473.0" prefHeight="17.0" prefWidth="680.0" textFill="green" />
+        <Button fx:id="backButton" layoutX="657.0" layoutY="13.0" onAction="#goBack" text="Back" />
+      <Label layoutX="3.0" layoutY="497.0" prefHeight="27.0" prefWidth="706.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

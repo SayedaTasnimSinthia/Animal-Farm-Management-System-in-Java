@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="458.0" prefWidth="737.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.adminRelated_EmployeeRelated.EmployeeManagement">
+    <children>
+        <Rectangle fill="#32726b" height="50.0" layoutX="0.0" layoutY="0.0" width="737.0" />
+        <Label layoutX="4.0" layoutY="8.0" prefHeight="35.0" prefWidth="257.0" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="426.0" prefHeight="27.0" prefWidth="688.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+      <Button layoutX="593.0" layoutY="13.0" mnemonicParsing="false" onAction="#logout" text="Click here to logout" />
+      <Label alignment="TOP_CENTER" layoutY="62.0" prefHeight="17.0" prefWidth="737.0" text="Employee Management" textAlignment="CENTER" textFill="#1a5b5a" underline="true">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="301.0" layoutY="115.0" mnemonicParsing="false" onAction="#addEmployee" text="Add new Employee">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="278.0" layoutY="160.0" mnemonicParsing="false" onAction="#editEmployee" text="Edit Employee Information">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="265.0" layoutY="206.0" mnemonicParsing="false" onAction="#viewAllEmployeeInfo" text="View All Employee Information">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="310.0" layoutY="293.0" mnemonicParsing="false" onAction="#manageSalaries" text="Manage Salaries">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="282.0" layoutY="251.0" mnemonicParsing="false" onAction="#Attandence" text="Attendance Management">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

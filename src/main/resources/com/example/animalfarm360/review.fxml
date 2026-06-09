@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="649.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.controller.Reviews">
+
+
+    <children>
+        <Rectangle fill="#32726b" height="50.0" layoutX="0.0" layoutY="0.0" width="737.0" />
+        <Label layoutX="4.0" layoutY="8.0" prefHeight="35.0" prefWidth="257.0" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="567.0" prefHeight="27.0" prefWidth="688.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="loginCombo" layoutX="645.0" layoutY="13.0" onAction="#Login" prefHeight="25.0" prefWidth="72.0" promptText="Login" style="-fx-background-color: #50c6b4; -fx-text-fill: white;" />
+        <Label fx:id="about" layoutX="437.0" layoutY="16.0" onMouseClicked="#About" text="About" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="bookVisit" layoutX="361.0" layoutY="16.0" onMouseClicked="#Booking" text="Book Visit" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="home" layoutX="310.0" layoutY="16.0" onMouseClicked="#Home" text="Home" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="contact" layoutX="486.0" layoutY="16.0" onMouseClicked="#ContactInfo" text="Contact Us" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="review" layoutX="565.0" layoutY="16.0" onMouseClicked="#Review" text="Reviews" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+
+
+
+
+        <Label layoutX="7.0" layoutY="61.0" prefHeight="19.0" prefWidth="160.0" text="What our customer say : " textFill="#397b86">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutX="8.0" layoutY="80" prefHeight="192.0" prefWidth="723.0">
+            <content>
+                <AnchorPane fx:id="reviewPanel" minHeight="184.0" prefHeight="190.0" prefWidth="721.0" />
+            </content>
+        </ScrollPane>
+        <TextField fx:id="nameField" layoutX="7.0" layoutY="324.0" prefHeight="25.0" prefWidth="723.0" />
+        <TextArea fx:id="feedbackField" layoutX="7.0" layoutY="391.0" prefHeight="69.0" prefWidth="723.0" />
+        <ComboBox fx:id="ratingBox" layoutX="8.0" layoutY="488.0" prefWidth="100" />
+
+        <Button fx:id="submit" layoutX="8.0" layoutY="531.0" onAction="#SubmitAction" text="Submit" />
+      <Label layoutX="6.0" layoutY="282.0" prefHeight="21.0" prefWidth="730.0" text="Rate us :" textFill="#397b86" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="303.0" prefHeight="21.0" prefWidth="702.0" text="Your Name :" textFill="#397b86">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="363.0" prefHeight="21.0" prefWidth="702.0" text="Feedback :" textFill="#397b86">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="467.0" prefHeight="21.0" prefWidth="702.0" text="Rating (1-5) :" textFill="#397b86">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+
+    </children>
+</AnchorPane>

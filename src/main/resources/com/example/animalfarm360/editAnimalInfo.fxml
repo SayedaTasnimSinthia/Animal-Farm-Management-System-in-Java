@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="false" fitToWidth="true" hbarPolicy="NEVER" prefHeight="700.0" prefWidth="700.0" vbarPolicy="AS_NEEDED" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.adminRelated_AnimalManagementRelated.EditAnimalInfo">
+
+    <content>
+        <AnchorPane prefHeight="950" prefWidth="700" style="-fx-background-color: white;">
+            <Rectangle fill="#32726b" height="50" width="700" />
+            <Label layoutX="10" layoutY="8" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+                <font><Font name="System Bold Italic" size="24" /></font>
+            </Label>
+            <Button layoutX="635.0" layoutY="13.0" onAction="#backAction" text="Back" />
+            <TextField fx:id="searchAnimalIdField" layoutX="285.0" layoutY="13.0" prefWidth="200" promptText="Enter Animal ID" />
+            <Button layoutX="495.0" layoutY="13.0" onAction="#loadAnimal" text="Load Animal" />
+            <Label layoutX="20" layoutY="110" text="Animal ID:" textFill="#2c1ec6"/>
+            <TextField fx:id="animalIdField" editable="false" layoutX="250" layoutY="110" prefWidth="350" />
+            <Label layoutX="20" layoutY="145" text="Category:" textFill="#2c1ec6"/>
+            <ComboBox fx:id="categoryComboBox" layoutX="250" layoutY="145" prefWidth="350" />
+            <Label layoutX="20" layoutY="180" text="Breed:" textFill="#2c1ec6"/>
+            <ComboBox fx:id="breedComboBox" layoutX="250" layoutY="180" prefWidth="350" />
+            <Label layoutX="20" layoutY="215" text="Date of Birth:" textFill="#2c1ec6"/>
+            <DatePicker fx:id="dobField" layoutX="250" layoutY="215" />
+            <Label layoutX="20" layoutY="250" text="Gender:" textFill="#2c1ec6"/>
+            <RadioButton layoutX="250" layoutY="250" text="Male">
+                <toggleGroup><ToggleGroup fx:id="genderGroup" /></toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="320" layoutY="250" text="Female" toggleGroup="$genderGroup" />
+            <Label layoutX="20" layoutY="285" text="Upload Image:" textFill="#2c1ec6"/>
+            <ImageView fx:id="animalImageView" fitHeight="100" fitWidth="100" layoutX="250" layoutY="285" preserveRatio="true" />
+            <Button layoutX="370" layoutY="285" onAction="#uploadImage" text="Browse Image" />
+            <Label layoutX="20" layoutY="400" text="Health Status:" textFill="#2c1ec6"/>
+            <RadioButton layoutX="250" layoutY="400" text="Healthy">
+                <toggleGroup><ToggleGroup fx:id="healthStatusGroup" /></toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="320" layoutY="400" text="Sick" toggleGroup="$healthStatusGroup" />
+            <RadioButton layoutX="380" layoutY="400" text="Injured" toggleGroup="$healthStatusGroup" />
+            <RadioButton layoutX="470" layoutY="400" text="Dead" toggleGroup="$healthStatusGroup" />
+            <Label layoutX="20" layoutY="435" text="Notes:" textFill="#2c1ec6"/>
+            <TextArea fx:id="notesField" layoutX="250" layoutY="435" prefHeight="80" prefWidth="350" />
+            <Label layoutX="20" layoutY="530" text="Productivity:" textFill="#2c1ec6"/>
+            <RadioButton layoutX="250" layoutY="530" text="Milk Yield">
+                <toggleGroup><ToggleGroup fx:id="productivityGroup" /></toggleGroup>
+            </RadioButton>
+            <TextField fx:id="milkYieldField" layoutX="380" layoutY="530" prefWidth="100" promptText="Liters" />
+            <RadioButton layoutX="250" layoutY="565" text="Egg Count" toggleGroup="$productivityGroup" />
+            <TextField fx:id="eggCountField" layoutX="380" layoutY="565" prefWidth="100" promptText="Count" />
+            <RadioButton layoutX="250" layoutY="600" text="Meat Yield" toggleGroup="$productivityGroup" />
+            <TextField fx:id="meatYieldField" layoutX="380" layoutY="600" prefWidth="100" promptText="Kg" />
+            <RadioButton layoutX="250" layoutY="635" text="Wool" toggleGroup="$productivityGroup" />
+            <TextField fx:id="woolField" layoutX="380" layoutY="635" prefWidth="100" promptText="Kg" />
+            <RadioButton layoutX="250" layoutY="670" text="Only for Sale" toggleGroup="$productivityGroup" />
+            <Label layoutX="20" layoutY="710" text="Sale Status:" textFill="#2c1ec6"/>
+            <RadioButton layoutX="250" layoutY="710" text="Available">
+                <toggleGroup><ToggleGroup fx:id="saleStatusGroup" /></toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="340" layoutY="710" text="Sold" toggleGroup="$saleStatusGroup" />
+            <RadioButton layoutX="420" layoutY="710" text="Not for Sale" toggleGroup="$saleStatusGroup" />
+            <Label layoutX="20" layoutY="745" text="Sale Price:" textFill="#2c1ec6"/>
+            <TextField fx:id="salePriceField" layoutX="250" layoutY="745" prefWidth="150" />
+            <Label layoutX="20" layoutY="780" text="System Flag:" textFill="#2c1ec6"/>
+            <RadioButton layoutX="250" layoutY="780" text="Active">
+                <toggleGroup><ToggleGroup fx:id="systemFlagGroup" /></toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="320" layoutY="780" text="Inactive" toggleGroup="$systemFlagGroup" />
+            <Button layoutX="250" layoutY="820" onAction="#updateAnimal" text="Update Animal" />
+         <Label alignment="CENTER" layoutX="-1.0" layoutY="59.0" prefHeight="32.0" prefWidth="686.0" text="Edit Animal Information (load animal information by entering id)" textFill="#1a2a6b" underline="true">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Label>
+            <Label layoutX="17.0" layoutY="870.0" prefHeight="27.0" prefWidth="688.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+                <font>
+                    <Font size="10.0" />
+                </font>
+            </Label>
+        </AnchorPane>
+    </content>
+</ScrollPane>

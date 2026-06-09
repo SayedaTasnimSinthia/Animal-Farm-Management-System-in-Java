@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="570.0" prefWidth="761.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.adminRelated_AnimalManagementRelated.VaccinationManagement">
+    <Rectangle fill="#32726b" height="50.0" layoutX="0.0" layoutY="0.0" width="761.0" />
+    <Label layoutX="10.0" layoutY="8.0" prefHeight="35.0" prefWidth="300.0" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+        <font><Font name="System Bold Italic" size="24.0" /></font>
+    </Label>
+    <Label layoutX="10" layoutY="60" text="Animal ID:" textFill="#274fd3" />
+    <TextField fx:id="searchAnimalIdField" layoutX="100" layoutY="55" prefWidth="200" promptText="Enter Animal ID" />
+    <Button layoutX="320" layoutY="55" onAction="#loadAnimal" text="Load Animal" />
+    <Label layoutX="11.0" layoutY="90.0" text="Category:" textFill="#274fd3" />
+    <TextField fx:id="categoryField" editable="false" layoutX="100.0" layoutY="86.0" prefWidth="200" />
+    <Label layoutX="337.0" layoutY="90.0" text="Breed:" textFill="#274fd3" />
+    <TextField fx:id="breedField" editable="false" layoutX="386.0" layoutY="86.0" prefWidth="200" />
+    <TableView fx:id="vaccinationTable" layoutX="12.0" layoutY="121.0" prefHeight="250" prefWidth="737.0">
+        <columns>
+            <TableColumn fx:id="columnVaccineName" prefWidth="200" text="Vaccine Name" />
+            <TableColumn fx:id="columnDateGiven" prefWidth="150" text="Date Given" />
+            <TableColumn fx:id="columnNextDueDate" prefWidth="169.0" text="Next Due" />
+            <TableColumn fx:id="columnStatus" prefWidth="216.0" text="Status" />
+        </columns>
+    </TableView>
+    <Label layoutX="11.0" layoutY="381.0" text="Add Vaccination:" textFill="#2841b2" underline="true" />
+    <Label layoutX="10.0" layoutY="409.0" text="Vaccine Name:" textFill="#2841b2" />
+    <TextField fx:id="vaccineNameField" layoutX="110.0" layoutY="405.0" prefWidth="200" />
+    <Label layoutX="350.0" layoutY="409.0" text="Date Given:" textFill="#2841b2" />
+    <DatePicker fx:id="dateGivenField" layoutX="428.0" layoutY="405.0" />
+    <Label layoutX="11.0" layoutY="451.0" text="Next Due:" textFill="#2841b2" />
+    <DatePicker fx:id="nextDueDateField" layoutX="113.0" layoutY="447.0" />
+    <Label layoutX="353.0" layoutY="451.0" text="Status:" textFill="#2841b2" />
+    <RadioButton fx:id="rbDone" layoutX="428.0" layoutY="451.0" text="Done">
+      <toggleGroup>
+         <ToggleGroup fx:id="statusGroup" />
+      </toggleGroup></RadioButton>
+    <RadioButton fx:id="rbMissed" layoutX="515.0" layoutY="451.0" text="Missed" toggleGroup="$statusGroup" />
+    <Button layoutX="322.0" layoutY="507.0" onAction="#addVaccination" text="Add Record" />
+   <Label layoutX="10.0" layoutY="547.0" prefHeight="25.0" prefWidth="702.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Label>
+   <Button layoutX="697.0" layoutY="13.0" mnemonicParsing="false" onAction="#back" text="Back" />
+</AnchorPane>

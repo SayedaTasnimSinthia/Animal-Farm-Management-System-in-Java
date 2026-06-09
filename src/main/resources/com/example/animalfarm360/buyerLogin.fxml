@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="483.0" prefWidth="737.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.buyerRelated.BuyerLogin">
+    <children>
+    <Rectangle fill="#32726b" height="50.0" layoutX="0.0" layoutY="0.0" width="737.0" />
+    <Label layoutX="4.0" layoutY="8.0" prefHeight="35.0" prefWidth="257.0" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+        <font>
+            <Font name="System Bold Italic" size="24.0" />
+        </font>
+    </Label>
+    <Label layoutX="4.0" layoutY="456.0" prefHeight="27.0" prefWidth="688.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </Label>
+    <ComboBox fx:id="loginCombo" layoutX="645.0" layoutY="13.0" onAction="#Login" prefHeight="25.0" prefWidth="72.0" promptText="Login" style="-fx-background-color: #50c6b4; -fx-text-fill: white;" />
+    <Label fx:id="about" layoutX="437.0" layoutY="16.0" onMouseClicked="#About" text="About" textFill="WHITE">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="bookVisit" layoutX="361.0" layoutY="16.0" onMouseClicked="#Booking" text="Book Visit" textFill="WHITE">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="home" layoutX="310.0" layoutY="16.0" onMouseClicked="#Home" text="Home" textFill="WHITE">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="contact" layoutX="486.0" layoutY="16.0" onMouseClicked="#ContactInfo" text="Contact Us" textFill="WHITE">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="review" layoutX="565.0" layoutY="16.0" onMouseClicked="#Review" text="Reviews" textFill="WHITE">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+
+        <Label layoutX="159.0" layoutY="121.0" text="Email:" textFill="#2a2fbf" />
+        <TextField fx:id="emailField" layoutX="270.0" layoutY="117.0" prefWidth="250.0" />
+
+        <Label layoutX="159.0" layoutY="165.0" text="Password:" textFill="#2a2fbf" />
+        <PasswordField fx:id="passwordField" layoutX="270.0" layoutY="161.0" prefWidth="250.0" />
+
+        <Button layoutX="350.0" layoutY="217.0" onAction="#loginBuyer" prefHeight="25.0" prefWidth="84.0" text="Login" />
+        <Hyperlink layoutX="322.0" layoutY="268.0" onAction="#goToRegister" text="New user? Please Register" />
+      <Label alignment="CENTER" layoutX="5.0" layoutY="61.0" prefHeight="35.0" prefWidth="729.0" style="-fx-font-size: 24; -fx-font-weight: bold;" text="&quot;BUYER Login&quot;" textFill="#248677" underline="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

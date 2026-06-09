@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="649.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.controller.About">
+
+    <children>
+        <Rectangle fill="#32726b" height="50.0" layoutX="0.0" layoutY="0.0" width="737.0" />
+        <Label layoutX="4.0" layoutY="8.0" prefHeight="35.0" prefWidth="257.0" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="523.0" prefHeight="27.0" prefWidth="688.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="loginCombo" layoutX="645.0" layoutY="13.0" onAction="#Login" prefHeight="25.0" prefWidth="72.0" promptText="Login" style="-fx-background-color: #50c6b4; -fx-text-fill: white;" />
+        <Label fx:id="about" layoutX="437.0" layoutY="16.0" onMouseClicked="#About" text="About" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="bookVisit" layoutX="361.0" layoutY="16.0" onMouseClicked="#Booking" text="Book Visit" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="home" layoutX="310.0" layoutY="16.0" onMouseClicked="#Home" text="Home" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="contact" layoutX="486.0" layoutY="16.0" onMouseClicked="#ContactInfo" text="Contact Us" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="review" layoutX="565.0" layoutY="16.0" onMouseClicked="#Review" text="Reviews" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea accessibleRole="TEXT_FIELD" editable="false" layoutX="6.0" layoutY="153.0" prefHeight="294.0" prefWidth="725.0" style="-fx-text-fill: black; -fx-control-inner-background: white;" text="Animal Farm 360 was founded in 2017 by Sayeda Tasnim Sinthia with the mission of promoting sustainable &amp; ethical farming practices while providing high-quality animals &amp; animal-based products.&#10;&#10;Located in Munshiganj, Dhaka, Bangladesh, the farm specializes in raising healthy livestock, including cows, goats &amp; poultry &amp; offers a wide range of products such as milk, eggs &amp; meat.&#10;&#10;Our objective is to create a harmonious environment where animals are cared for with the utmost attention &amp; customers can enjoy fresh, responsibly sourced products. We also welcome visitors to experience farm life firsthand through guided tours, workshops &amp; educational programs.&#10;&#10;Over the years, Animal Farm 360 has become a trusted name in the community, known for its quality, transparency &amp; a commitment to sustainability. Our vision is to continue growing while maintaining the highest standards of animal welfare &amp; customer satisfaction." wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextArea>
+        <Label alignment="CENTER" layoutX="6.0" layoutY="85.0" prefHeight="40.0" prefWidth="731.0" text="&quot;About Animal Farm 360 &quot;" textFill="#2d5e58" underline="true">
+            <font>
+                <Font name="System Bold Italic" size="28.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

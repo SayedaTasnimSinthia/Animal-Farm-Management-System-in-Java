@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="false" fitToWidth="true" hbarPolicy="NEVER" prefHeight="600.0" prefWidth="746.0" vbarPolicy="AS_NEEDED" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.adminRelated_EmployeeRelated.EditEmployeeInformation">
+
+    <content>
+        <AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: white;">
+
+            <children>
+                <Rectangle fill="#32726b" height="50.0" layoutX="0.0" layoutY="0.0" width="737.0" />
+                <Label layoutX="4.0" layoutY="8.0" prefHeight="35.0" prefWidth="257.0" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="17.0" layoutY="753.0" prefHeight="27.0" prefWidth="688.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="searchField" layoutX="389.0" layoutY="13.0" prefWidth="200" promptText="Search by Name or ID" />
+                <Button layoutX="600.0" layoutY="13.0" onAction="#searchEmployee" text="Search" />
+                <Button layoutX="679.0" layoutY="13.0" onAction="#backAction" text="Back" />
+                <TableView fx:id="employeeTable" layoutX="8.0" layoutY="62.0" prefHeight="250" prefWidth="716.0">
+                    <columns>
+                        <TableColumn fx:id="columnId" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="columnName" prefWidth="105.0" text="Name" />
+                        <TableColumn fx:id="columnDepartment" prefWidth="135.0" text="Department" />
+                        <TableColumn fx:id="columnPosition" prefWidth="100" text="Position" />
+                        <TableColumn fx:id="columnPhone" prefWidth="101.0" text="Phone" />
+                        <TableColumn fx:id="columnStatus" minWidth="0.0" prefWidth="101.0" text="Status" />
+                        <TableColumn fx:id="columnEmployeeType" prefWidth="148.0" text="Type" />
+                    </columns>
+                </TableView>
+                <Label layoutX="15" layoutY="320" text="Employee Details:" textFill="#2c1ec6" underline="true" />
+                <Label layoutX="15" layoutY="350" text="Full Name:" textFill="#180dab" />
+                <TextField fx:id="nameField" editable="false" layoutX="150" layoutY="350" prefWidth="200" />
+                <Label layoutX="400" layoutY="350" text="Employee ID:" textFill="#180dab" />
+                <TextField fx:id="employeeIdField" editable="false" layoutX="520" layoutY="350" prefWidth="200" />
+                <Label layoutX="15" layoutY="390" text="Department:" textFill="#180dab" />
+                <ComboBox fx:id="departmentComboBox" editable="false" layoutX="150" layoutY="390" prefWidth="200" />
+                <Label layoutX="400" layoutY="390" text="Position:" textFill="#180dab" />
+                <ComboBox fx:id="positionComboBox" editable="false" layoutX="520" layoutY="390" prefWidth="200" />
+                <Label layoutX="15" layoutY="430" text="Phone:" textFill="#180dab" />
+                <TextField fx:id="phoneField" layoutX="150" layoutY="430" prefWidth="200" />
+                <Label layoutX="400" layoutY="430" text="Status:" textFill="#180dab" />
+                <TextField fx:id="statusField" layoutX="520" layoutY="430" prefWidth="200" />
+                <Label layoutX="15" layoutY="470" text="Employee Type:" textFill="#180dab" />
+                <TextField fx:id="employeeTypeField" layoutX="150" layoutY="470" prefWidth="200" />
+                <Label layoutX="400" layoutY="470" text="Email:" textFill="#180dab" />
+                <TextField fx:id="emailField" layoutX="520" layoutY="470" prefWidth="200" />
+                <Label layoutX="15" layoutY="510" text="Address:" textFill="#180dab" />
+                <TextField fx:id="addressField" layoutX="150" layoutY="510" prefWidth="200" />
+                <Label layoutX="400" layoutY="510" text="Date Of Birth:" textFill="#180dab" />
+                <DatePicker fx:id="dobField" layoutX="520" layoutY="510" prefWidth="200" />
+                <Label layoutX="15" layoutY="550" text="Date Of Joining:" textFill="#180dab" />
+                <DatePicker fx:id="dojField" layoutX="150" layoutY="550" prefWidth="200" />
+                <Label layoutX="400" layoutY="550" text="Gender:" textFill="#180dab" />
+                <TextField fx:id="genderField" layoutX="520" layoutY="550" prefWidth="200" />
+                <Label layoutX="15" layoutY="590" text="Username:" textFill="#180dab" />
+                <TextField fx:id="usernameField" layoutX="150" layoutY="590" prefWidth="200" />
+                <Label layoutX="400" layoutY="590" text="Password:" textFill="#180dab" />
+                <TextField fx:id="passwordField" layoutX="520" layoutY="590" prefWidth="200" />
+                <Label layoutX="15" layoutY="630" text="Salary:" textFill="#180dab" />
+                <TextField fx:id="salaryField" layoutX="150" layoutY="630" prefWidth="200" />
+                <Label layoutX="400" layoutY="630" text="Emergency Name:" textFill="#180dab" />
+                <TextField fx:id="emergencyNameField" layoutX="520" layoutY="630" prefWidth="200" />
+                <Label layoutX="15" layoutY="670" text="Emergency Phone:" textFill="#180dab" />
+                <TextField fx:id="emergencyPhoneField" layoutX="150" layoutY="670" prefWidth="200" />
+                <Label layoutX="400" layoutY="670" text="Profile Image:" textFill="#180dab" />
+                <ImageView fx:id="employeeImageView" fitHeight="100" fitWidth="100" layoutX="520" layoutY="670" preserveRatio="true" />
+                <Button layoutX="316.0" layoutY="730.0" onAction="#updateEmployee" text="Save Changes" />
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

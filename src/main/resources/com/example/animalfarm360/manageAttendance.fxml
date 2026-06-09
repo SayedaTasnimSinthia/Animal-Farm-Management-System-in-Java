@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="649.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalfarm360.adminRelated_EmployeeRelated.ManageAttendance">
+
+    <children>
+        <Rectangle fill="#32726b" height="50.0" layoutX="0.0" layoutY="0.0" width="737.0" />
+        <Label layoutX="4.0" layoutY="8.0" prefHeight="35.0" prefWidth="257.0" text="🐏🐓 Animal Farm 360 " textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="523.0" prefHeight="27.0" prefWidth="688.0" text="© 2025 Animal Farm 360 | All Rights Reserved" textFill="#a89e9e">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="78.0" text="Employee ID:" textFill="#2f2fc3" />
+        <TextField fx:id="employeeIdField" layoutX="200.0" layoutY="74.0" prefWidth="200" />
+        <Label layoutX="54.0" layoutY="127.0" text="Date:" textFill="#2f2fc3" />
+        <DatePicker fx:id="datePicker" layoutX="200.0" layoutY="123.0" prefWidth="200" />
+        <Label layoutX="50.0" layoutY="181.0" text="Status:" textFill="#2f2fc3" />
+        <RadioButton fx:id="presentRadio" layoutX="201.0" layoutY="173.0" text="Present">
+            <toggleGroup>
+                <ToggleGroup fx:id="attendanceGroup" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="absentRadio" layoutX="300.0" layoutY="173.0" text="Absent" toggleGroup="$attendanceGroup" />
+        <RadioButton fx:id="lateRadio" layoutX="400.0" layoutY="173.0" text="Late" toggleGroup="$attendanceGroup" />
+        <Label fx:id="message" alignment="CENTER" layoutX="163.0" layoutY="241.0" prefHeight="20.0" prefWidth="320.0" textFill="red" />
+        <Button layoutX="255.0" layoutY="204.0" onAction="#saveAttendance" prefHeight="25.0" prefWidth="110.0" text="Save Attendance" />
+        <Button layoutX="655.0" layoutY="14.0" onAction="#backAction" prefHeight="25.0" prefWidth="61.0" text="Back" />
+        <Label layoutX="54.0" layoutY="280.0" text="Search Attendance:" textFill="#2f2fc3" />
+        <Button layoutX="205.0" layoutY="276.0" onAction="#searchAttendance" prefHeight="25.0" prefWidth="100.0" text="Search" />
+        <TableView fx:id="attendanceTable" layoutX="11.0" layoutY="325.0" prefHeight="199.0" prefWidth="713.0">
+            <columns>
+                <TableColumn fx:id="dateColumn" prefWidth="318.0" text="Date" />
+                <TableColumn fx:id="statusColumn" prefWidth="394.0" text="Status" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

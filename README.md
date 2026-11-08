@@ -39,7 +39,6 @@ The system provides separate role-based portals for buyers, employees and admini
 
 | Category | Technology |
 |---|---|
-|---|---|
 | Programming Language | Java |
 | GUI Framework | JavaFX |
 | UI Design | FXML |

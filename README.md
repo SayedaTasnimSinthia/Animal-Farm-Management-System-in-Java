@@ -39,12 +39,15 @@ The system provides separate role-based portals for buyers, employees and admini
 
 | Category | Technology |
 |---|---|
+|---|---|
 | Programming Language | Java |
 | GUI Framework | JavaFX |
 | UI Design | FXML |
 | UI Development Tool | Scene Builder |
+| Database Management System | MySQL |
 | Build & Dependency Management | Maven |
 | IDE | IntelliJ IDEA |
 | Application Type | Desktop Application |
+
 
 
